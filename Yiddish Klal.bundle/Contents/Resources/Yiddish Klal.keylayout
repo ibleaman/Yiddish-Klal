@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Yiddish Klal is a free Standard Yiddish keyboard layout created by Isaac Bleaman (ibleaman [shtrudl] nyu.edu).&#x000A;&#x000A;For instructions on installation and use, see: https://wp.nyu.edu/ibleaman/yiddish/typing/&#x000A;&#x000A;You can redistribute this layout and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The layout is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details: http://www.gnu.org/licenses/-->
-<!--Last edited by Ukelele version 3.0.0.28 on 2015-10-05 at 23:02 (EDT)-->
+<!--Last edited by Ukelele version 3.0.0.28 on 2015-10-06 at 19:49 (EDT)-->
 <keyboard group="126" id="-30022" maxout="3" name="Yiddish Klal">
 	<layouts>
 		<layout first="0" last="17" mapSet="ANSI" modifiers="Modifiers"/>
@@ -78,16 +78,16 @@
 			<key code="27" output="־"/>
 			<key code="28" output="8"/>
 			<key code="29" output="0"/>
-			<key code="30" output="]"/>
+			<key code="30" output="["/>
 			<key code="31" output="אָ"/>
 			<key code="32" output="ו"/>
-			<key code="33" output="["/>
+			<key code="33" output="]"/>
 			<key code="34" output="י"/>
 			<key code="35" output="פּ"/>
 			<key code="36" output="&#x000D;"/>
 			<key code="37" output="ל"/>
 			<key code="38" output="ײ"/>
-			<key code="39" output="&#x0027;"/>
+			<key code="39" output="′"/>
 			<key code="40" output="ק"/>
 			<key code="41" output=";"/>
 			<key code="42" output="\"/>
@@ -164,7 +164,7 @@
 			<key code="24" output="+"/>
 			<key code="25" output=")"/>
 			<key code="26" output="&#x0026;"/>
-			<key code="27" output="–"/>
+			<key code="27" output="-"/>
 			<key code="28" output="*"/>
 			<key code="29" output="("/>
 			<key code="30" output="„"/>
@@ -176,7 +176,7 @@
 			<key code="36" output="&#x000D;"/>
 			<key code="37" output="ל"/>
 			<key code="38" output="דזש"/>
-			<key code="39" output="&#x0022;"/>
+			<key code="39" output="″"/>
 			<key code="40" output="כּ"/>
 			<key code="41" output=":"/>
 			<key code="42" output="|"/>
@@ -250,7 +250,7 @@
 			<key code="21" output="¢"/>
 			<key code="22" output="§"/>
 			<key code="23" output="∞"/>
-			<key code="24" output="≠"/>
+			<key code="24" output="⸗"/>
 			<key code="25" output="ª"/>
 			<key code="26" output="¶"/>
 			<key code="27" output="–"/>
@@ -265,10 +265,10 @@
 			<key code="36" output="&#x000D;"/>
 			<key code="37" output="¬"/>
 			<key code="38" output="∆"/>
-			<key code="39" output="׳"/>
+			<key code="39" output="&#x0027;"/>
 			<key code="40" output="˚"/>
 			<key code="41" output="…"/>
-			<key code="42" output="«"/>
+			<key code="42" output="׳"/>
 			<key code="43" output="≤"/>
 			<key code="44" output="÷"/>
 			<key code="45" output="˜"/>
@@ -339,7 +339,7 @@
 			<key code="21" output="›"/>
 			<key code="22" output="ﬂ"/>
 			<key code="23" output="ﬁ"/>
-			<key code="24" output="±"/>
+			<key code="24" output="≠"/>
 			<key code="25" output="·"/>
 			<key code="26" output="‡"/>
 			<key code="27" output="—"/>
@@ -354,10 +354,10 @@
 			<key code="36" output="&#x000D;"/>
 			<key code="37" output="Ò"/>
 			<key code="38" output="Ô"/>
-			<key code="39" output="״"/>
+			<key code="39" output="&#x0022;"/>
 			<key code="40" output=""/>
 			<key code="41" output="”"/>
-			<key code="42" output="»"/>
+			<key code="42" output="״"/>
 			<key code="43" output="¯"/>
 			<key code="44" output="¿"/>
 			<key code="45" output="˜"/>

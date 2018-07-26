@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>org.sil.ukelele.keyboardlayout.yiddishklal</string>
+	<key>CFBundleName</key>
+	<string>Yiddish Klal Ligatur</string>
+	<key>CFBundleVersion</key>
+	<string>0.3</string>
+	<key>KLInfo_Yiddish Klal Ligatur</key>
+	<dict>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.yiddishklal.yiddishklalligatur</string>
+		<key>TISIntendedLanguage</key>
+		<string>yi</string>
+	</dict>
+</dict>
+</plist>

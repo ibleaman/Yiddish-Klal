@@ -7,9 +7,13 @@
 	<key>CFBundleName</key>
 	<string>Yiddish Klal Ligatur</string>
 	<key>CFBundleVersion</key>
-	<string>0.3</string>
+	<string>0.4</string>
 	<key>KLInfo_Yiddish Klal Ligatur</key>
 	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISIconIsTemplate</key>
+		<false/>
 		<key>TISInputSourceID</key>
 		<string>org.sil.ukelele.keyboardlayout.yiddishklal.yiddishklalligatur</string>
 		<key>TISIntendedLanguage</key>

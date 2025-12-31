@@ -7,13 +7,24 @@
 	<key>CFBundleName</key>
 	<string>Yiddish Klal</string>
 	<key>CFBundleVersion</key>
-	<string>1.4</string>
+	<string>1.5</string>
 	<key>KLInfo_Yiddish Klal</key>
 	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISIconIsTemplate</key>
+		<false/>
 		<key>TISInputSourceID</key>
 		<string>org.sil.ukelele.keyboardlayout.yiddishklal.yiddishklal</string>
 		<key>TISIntendedLanguage</key>
 		<string>yi</string>
+	</dict>
+	<key>UkeleleInfo_Yiddish Klal</key>
+	<dict>
+		<key>Font</key>
+		<string>TimesNewRomanPSMT</string>
+		<key>FontSize</key>
+		<real>22.5</real>
 	</dict>
 </dict>
 </plist>

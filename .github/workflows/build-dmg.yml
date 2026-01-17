@@ -1,0 +1,44 @@
+name: Build DMGs
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        brew install create-dmg fileicon
+    
+    - name: Build Yiddish Klal DMG
+      run: |
+        chmod +x build-dmg.sh
+        ./build-dmg.sh "Yiddish-Klal"
+    
+    - name: Build Yiddish Klal Ligatur DMG
+      run: ./build-dmg.sh "Yiddish-Klal-Ligatur"
+    
+    - name: Upload DMGs as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: YiddishKlal-DMGs
+        path: |
+          YiddishKlal.dmg
+          YiddishKlalLigatur.dmg
+    
+    - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          YiddishKlal.dmg
+          YiddishKlal-Ligatur.dmg
+        generate_release_notes: true

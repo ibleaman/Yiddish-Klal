@@ -20,15 +20,14 @@ BUNDLE_DIR="${1:-Yiddish-Klal}"
 if [[ "$BUNDLE_DIR" == "Yiddish-Klal-Ligatur" ]]; then
     BUNDLE_NAME="Yiddish Klal Ligatur.bundle"
     DMG_NAME="YiddishKlalLigatur.dmg"
-    VOLUME_NAME="Yiddish Klal Ligatur Installer"
+    VOLUME_NAME="Yiddish Klal Ligatur - Installer"
 else
     BUNDLE_NAME="Yiddish Klal.bundle"
     DMG_NAME="YiddishKlal.dmg"
-    VOLUME_NAME="Yiddish Klal Installer"
+    VOLUME_NAME="Yiddish Klal - Installer"
 fi
 
 BACKGROUND_IMAGE="dmg-background.png"
-FOLDER_ICON="folder-icon.icns"
 KEYBOARD_ICON="Yiddish Klal.icns"
 
 echo "Building DMG for: $BUNDLE_NAME"
@@ -42,11 +41,6 @@ fi
 
 if [ ! -f "$BACKGROUND_IMAGE" ]; then
     echo "Error: Background image not found at $BACKGROUND_IMAGE"
-    exit 1
-fi
-
-if [ ! -f "$FOLDER_ICON" ]; then
-    echo "Error: Folder icon not found at $FOLDER_ICON"
     exit 1
 fi
 
@@ -66,17 +60,9 @@ cp -R "$BUNDLE_DIR/$BUNDLE_NAME" "$STAGING_DIR/"
 echo "Setting bundle icon..."
 fileicon set "$STAGING_DIR/$BUNDLE_NAME" "$KEYBOARD_ICON"
 
-# Create Finder alias to system Keyboard Layouts folder
-echo "Creating Keyboard Layouts alias..."
-osascript <<EOF
-tell application "Finder"
-    make new alias file at POSIX file "$STAGING_DIR" to POSIX file "/Library/Keyboard Layouts" with properties {name:"Keyboard Layouts"}
-end tell
-EOF
-
-# Apply folder icon to the alias using fileicon
-echo "Setting folder icon..."
-fileicon set "$STAGING_DIR/Keyboard Layouts" "$FOLDER_ICON"
+# Create symlink to system Keyboard Layouts folder
+echo "Creating Keyboard Layouts symlink..."
+ln -s /Library/Keyboard\ Layouts "$STAGING_DIR/Keyboard Layouts"
 
 # Remove old DMG if exists
 rm -f "$DMG_NAME"

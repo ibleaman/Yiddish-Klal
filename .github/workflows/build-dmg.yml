@@ -40,5 +40,5 @@ jobs:
       with:
         files: |
           YiddishKlal.dmg
-          YiddishKlal-Ligatur.dmg
+          YiddishKlalLigatur.dmg
         generate_release_notes: true

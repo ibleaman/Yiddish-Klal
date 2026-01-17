@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>Yiddish Klal</string>
 	<key>CFBundleVersion</key>
-	<string>1.5</string>
+	<string>2.0</string>
 	<key>KLInfo_Yiddish Klal</key>
 	<dict>
 		<key>TICapsLockLanguageSwitchCapable</key>

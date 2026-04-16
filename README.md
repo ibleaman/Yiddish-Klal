@@ -17,7 +17,7 @@ Download the latest installer from [Releases](https://github.com/ibleaman/Yiddis
 ## Layouts
 
 - **Yiddish Klal**: Standard phonetic (QWERTY) Yiddish keyboard layout
-- **Yiddish Klal Ligatur**: Version with pre-composed Unicode characters *(for specialized use cases)*
+- **Yiddish Klal Ligatur**: Version with precomposed Unicode characters *(for specialized use cases)*
 
 ## More Information
 

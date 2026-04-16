@@ -21,13 +21,13 @@ if [[ "$BUNDLE_DIR" == "Yiddish-Klal-Ligatur" ]]; then
     BUNDLE_NAME="Yiddish Klal Ligatur.bundle"
     DMG_NAME="YiddishKlalLigatur.dmg"
     VOLUME_NAME="Yiddish Klal Ligatur - Installer"
+    BACKGROUND_IMAGE="dmg-background-ligatur.png"
 else
     BUNDLE_NAME="Yiddish Klal.bundle"
     DMG_NAME="YiddishKlal.dmg"
     VOLUME_NAME="Yiddish Klal - Installer"
+    BACKGROUND_IMAGE="dmg-background.png"
 fi
-
-BACKGROUND_IMAGE="dmg-background.png"
 KEYBOARD_ICON="Yiddish Klal.icns"
 
 echo "Building DMG for: $BUNDLE_NAME"
@@ -48,6 +48,17 @@ if [ ! -f "$KEYBOARD_ICON" ]; then
     echo "Error: Keyboard icon not found at $KEYBOARD_ICON"
     exit 1
 fi
+
+# Prepare background image for Retina display
+# Scales to 2x resolution and sets DPI to 144 so macOS renders it
+# at the correct logical size in the DMG window
+echo "Preparing background image for Retina display..."
+RETINA_BACKGROUND="/tmp/dmg-background-retina.png"
+sips -s format png \
+     -s dpiWidth 144 -s dpiHeight 144 \
+     -z 800 1200 \
+     "$BACKGROUND_IMAGE" \
+     --out "$RETINA_BACKGROUND"
 
 # Create staging directory
 STAGING_DIR=$(mktemp -d)
@@ -72,17 +83,18 @@ echo "Creating DMG..."
 create-dmg \
   --volname "$VOLUME_NAME" \
   --volicon "$KEYBOARD_ICON" \
-  --background "$BACKGROUND_IMAGE" \
+  --background "$RETINA_BACKGROUND" \
   --window-pos 200 120 \
   --window-size 600 400 \
   --icon-size 80 \
-  --icon "$BUNDLE_NAME" 300 70 \
-  --icon "Keyboard Layouts" 300 280 \
+  --icon "$BUNDLE_NAME" 300 280 \
+  --icon "Keyboard Layouts" 300 70 \
   --hide-extension "$BUNDLE_NAME" \
   "$DMG_NAME" \
   "$STAGING_DIR"
 
 # Clean up
 rm -rf "$STAGING_DIR"
+rm -f "$RETINA_BACKGROUND"
 
 echo "✓ DMG created successfully: $DMG_NAME"
